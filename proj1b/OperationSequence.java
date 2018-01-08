@@ -15,7 +15,7 @@ public class OperationSequence {
 
     /** Creates an empty failure sequence. */
     public OperationSequence() {
-        opSequence = new ArrayDequeSolution<DequeOperation>();
+        opSequence = new ArrayDequeSolution<>();
     }
 
     /* Adds an operation to the failure sequence. */
@@ -40,7 +40,7 @@ public class OperationSequence {
     /** Creates a OperationSequence from a file. */
     public OperationSequence(String filename) {
         In in = new In(filename);
-        opSequence = new ArrayDequeSolution<DequeOperation>();
+        opSequence = new ArrayDequeSolution<>();
         while (!in.isEmpty()) {
             String opRead = in.readString();
             Matcher m = OP_PATTERN.matcher(opRead);
