@@ -39,7 +39,7 @@ public class Parse {
         eval(args[0]);
     }
 
-    private static void eval(String query) {
+    static void eval(String query) {
         Matcher m;
         if ((m = CREATE_CMD.matcher(query)).matches()) {
              createTable(m.group(1));
