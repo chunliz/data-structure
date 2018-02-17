@@ -40,7 +40,7 @@ public class AGGraphBuildingTest {
                 + " something else entirely.", numberOfNodes > 40000 && numberOfNodes < 50000);
         assertTrue("Your graph should have 28654 nodes after cleaning. Consider removing the call"
                 + " to clean and seeing if you get 130462 nodes as expected as a sanity check on"
-                + "  your results before calling clean.", numberOfNodes == 28654);
+                + "  your results before calling clean."+numberOfNodes, numberOfNodes == 28654);
     }
 
     @Test

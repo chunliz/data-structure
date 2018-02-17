@@ -50,9 +50,15 @@ public abstract class AGMapTest {
             assertTrue("Your results map is missing " + key, m2.containsKey(key));
             Object o1 = m1.get(key);
             Object o2 = m2.get(key);
+
+            //System.out.println(o1);
+            //System.out.println(o2);
+
             if (o1 instanceof Double) {
                 assertTrue(err, Math.abs((Double) o1 - (Double) o2) < DOUBLE_THRESHOLD);
             } else if (o1 instanceof String[][]) {
+                //System.out.println(((String[][]) o1)[0].length);
+                //System.out.println(((String[][]) o2)[0].length);
                 assertArrayEquals(err, (String[][]) o1, (String[][]) o2);
             } else {
                 assertEquals(err, o1, o2);
